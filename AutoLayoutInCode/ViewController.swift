@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     for label in viewsDictionary.keys {
       view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[\(label)]|", options: [], metrics: nil, views: viewsDictionary))
     }
-    view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[label1(==88)]-[label2(==88)]-[label3(==88)]-[label4(==88)]-[label5(==88)]-(>=10)-|", options: [], metrics: nil, views: viewsDictionary))
+    view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[label1(labelHeight)]-[label2(labelHeight)]-[label3(labelHeight)]-[label4(labelHeight)]-[label5(labelHeight)]->=10-|", options: [], metrics: ["labelHeight": 88], views: viewsDictionary))
   }
   
   override func didReceiveMemoryWarning() {
